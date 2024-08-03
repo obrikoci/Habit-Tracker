@@ -1,9 +1,9 @@
 import requests
 from datetime import datetime
 
-USERNAME = "obr1"
-TOKEN = "r@nd0mxg3n"
-GRAPHID = "graph1"
+USERNAME = "username"
+TOKEN = "token"
+GRAPHID = "graph name"
 
 pixela_endpoint = "https://pixe.la/v1/users"
 
@@ -15,7 +15,7 @@ user_params = {
     "notMinor": "yes",
 }
 # response = requests.post(url=pixela_endpoint, json=user_params)
-# print(response.text)  # -> account got created so this is no longer needed
+# print(response.text)  # -> once account got created this is no longer needed
 
 
 graph_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs"
@@ -32,7 +32,7 @@ headers = {
     "X-USER-TOKEN": TOKEN
 }
 # response = requests.post(url=graph_endpoint, json=graph_config, headers=headers)
-# print(response.text)  # -> graph got created so this is no longer needed
+# print(response.text)  # -> once graph got created so this is no longer needed
 
 
 pixel_creation_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPHID}"
